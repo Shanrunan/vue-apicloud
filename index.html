@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>入口页面</title>
+    <link rel="stylesheet" href="./res/css/sm.min.css">
+    <style>
+        .bar-nav {
+            background-color: #0099FF;
+        }
+
+        .bar-nav .title {
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body style="background-color: #fff">
+   
+    <script>
+        window.apiready = function() {
+            api.setStatusBarStyle({
+                style: 'light'
+            });
+            api.openFrame({
+                name: 'index',
+                //url: 'dist/html/index.html', //上传打包时使用
+                url: 'http://192.168.1.114:8010/html/index.html', //调试时使用
+                rect: {
+                    x: 0,
+                    y: 0,
+                    w: 'auto',
+                    h: 'auto'
+                },
+                bounces: false,
+                vScrollBarEnabled: true,
+                hScrollBarEnabled: true
+            });
+
+        };
+    </script>
+</body>
+
+</html>
